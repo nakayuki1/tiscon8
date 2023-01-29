@@ -77,6 +77,19 @@ public class EstimateService {
         // 距離当たりの料金を算出する
         int priceForDistance = distanceInt * PRICE_PER_DISTANCE;
 
+        //日時変換
+        String month = dto.getDay().substring(5, 7);
+        int iMonth = Integer.parseInt(month);
+
+
+        // 日付ごとの係数を取得
+        double n = 1;
+        if (iMonth == 3|| iMonth == 4){
+              n = 1.5;
+         }else if(iMonth == 9){
+              n = 1.3;
+         } 
+
         int boxes = getBoxForPackage(dto.getBox(), PackageType.BOX)
                 + getBoxForPackage(dto.getBed(), PackageType.BED)
                 + getBoxForPackage(dto.getBicycle(), PackageType.BICYCLE)
@@ -92,7 +105,10 @@ public class EstimateService {
             priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
         }
 
-        return priceForDistance + pricePerTruck + priceForOptionalService;
+        double result_1 = (priceForDistance + pricePerTruck + priceForOptionalService) * n;
+        int result = (int)result_1;
+
+        return result;
     }
 
     /**

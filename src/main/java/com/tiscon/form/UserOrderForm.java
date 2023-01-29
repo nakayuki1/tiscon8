@@ -21,6 +21,9 @@ public class UserOrderForm {
     @Numeric
     private String tel;
 
+    @NotBlank
+    private String day;
+
     @Email
     @NotBlank
     private String email;
@@ -58,6 +61,14 @@ public class UserOrderForm {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
     }
 
     public String getTel() {
