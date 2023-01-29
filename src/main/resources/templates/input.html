@@ -36,6 +36,11 @@
           <label for="day">引っ越し日時(YYYY/MM/DD)</label>
           <input type="date" id="day" name="day" th:field="*{day}" class="form-control" value="2023/01/28"/>
         </div>
+        <div class="error-message">
+          <ul th:if="${#fields.hasErrors('day')}">
+            <li th:each="err : ${#fields.errors('day')}" th:text="${err}"></li>
+          </ul>
+        </div>
         <div class="form-group">
           <label for="tel">連絡先TEL（例：00000000000）※半角数字、ハイフン無し</label>
           <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
