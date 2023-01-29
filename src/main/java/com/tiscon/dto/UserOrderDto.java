@@ -4,6 +4,8 @@ public class UserOrderDto {
 
     private String customerName;
 
+    private String day;
+
     private String tel;
 
     private String email;
@@ -32,6 +34,14 @@ public class UserOrderDto {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
     }
 
     public String getTel() {

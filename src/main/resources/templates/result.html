@@ -34,6 +34,11 @@
           <input type="hidden" name="customerName" id="customerName" th:value="*{customerName}"/>
         </tr>
         <tr>
+          <th style="width: 40%">引っ越し日時</th>
+          <td><span th:text="*{day}"></span></td>
+          <input type="hidden" name="day" id="day" th:value="*{day}"/>
+        </tr>
+        <tr>
           <th>連絡先TEL</th>
           <td><span th:text="*{tel}"></span></td>
           <input type="hidden" name="tel" id="tel" th:value="*{tel}"/>
