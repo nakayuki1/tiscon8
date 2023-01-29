@@ -25,9 +25,6 @@
       入力内容をご確認ください。<br/>
       この内容でお見積りする場合は、「概算お見積もりをする」ボタンを押してください。
     </div>
-    <ul th:if="${#fields.hasErrors('all')}">
-      <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
-    </ul>
     <div class="col-sm-12">
       <div class="sub-title">お客様情報</div>
       <table class="table table-bordered">

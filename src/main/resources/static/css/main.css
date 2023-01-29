@@ -255,6 +255,14 @@ td {
     color: #ff0000;
 }
 
+.Numeric.message {
+    color: #ff0000;
+}
+
+.Positive0rZero.message {
+    color: #ff0000;
+}
+
 .index-block{
     margin: 0 auto;
     width: 800px;

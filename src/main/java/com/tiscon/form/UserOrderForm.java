@@ -1,6 +1,7 @@
 package com.tiscon.form;
 
 import com.tiscon.validator.Numeric;
+import com.tiscon.validator.PositiveOrZero;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -36,20 +37,16 @@ public class UserOrderForm {
     @NotBlank
     private String newAddress;
 
-    @Numeric
-    @NotBlank
+    @PositiveOrZero
     private String box;
 
-    @Numeric
-    @NotBlank
+    @PositiveOrZero
     private String bed;
 
-    @Numeric
-    @NotBlank
+    @PositiveOrZero
     private String bicycle;
 
-    @Numeric
-    @NotBlank
+    @PositiveOrZero
     private String washingMachine;
 
     @NotNull
